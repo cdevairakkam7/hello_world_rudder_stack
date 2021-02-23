@@ -12,7 +12,77 @@ rudderanalytics=window.rudderanalytics=[];for(var methods=["load","page","track"
 
 <body>
 	Hello
-	
+	<input id="input_from_field" placeholder="Enter your email to be identified">
+</input>
+
+	<button onclick="capture_signup();" id="signup_button"> Signup
+	</button>
+    <div>
+	<button onclick="green_button();" style="color: green;background: black"> Click this button
+	</button>
+	<div>
+
+		<div>
+	<button onclick="maroon_button();" style="color: white;background: maroon"> Click this button
+	</button>
+	<div>
+
+<script>
+
+// Rudder identify call	
+	function capture_signup(){
+		console.log("Email Id is "+input_from_field.value)
+
+
+		rudderanalytics.identify(
+  "Comes_from_the_backend",
+  { email: input_from_field.value },
+  {
+    page: {
+      path: "",
+      referrer: "",
+      search: "",
+      title: "",
+      url: "",
+    }
+  },
+  () => {
+    console.log("in identify call");
+  }
+);
+	}
+
+
+// Rudder Gree Button Track event 
+
+function green_button (){
+	rudderanalytics.track(
+  "Button Clicked on landing Page",
+  {
+    color:"Green",
+    background: "Black" ,
+  },
+  () => {console.log("in track call");}
+);
+
+}
+
+
+
+function maroon_button (){
+	rudderanalytics.track(
+  "Button Clicked on landing Page",
+  {
+    color:"white",
+    background: "Maroon" ,
+  },
+  () => {console.log("in track call");}
+);
+
+}
+// Rudder Maroon Button Track Event	
+
+</script>	
 </body>
 </HTML>
 
