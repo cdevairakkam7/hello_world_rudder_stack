@@ -2,6 +2,25 @@
 
 <HEAD>
 
+	<style>
+.button_style{
+    background-color:#B80C4D;
+    border: #2e6da4;
+  	font-family: Arial, Geneva, Arial, Helvetica,  sans-serif;
+	font-size: 15px;
+    color: #fff;
+    letter-spacing: 1px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: normal;
+    
+    border-radius: 4px;
+    line-height: 1.5;
+    text-decoration:none;
+}
+</style>
+	
+
 <script>
 rudderanalytics=window.rudderanalytics=[];for(var methods=["load","page","track","identify","alias","group","ready","reset","getAnonymousId","setAnonymousId"],i=0;i<methods.length;i++){var method=methods[i];rudderanalytics[method]=function(a){return function(){rudderanalytics.push([a].concat(Array.prototype.slice.call(arguments)))}}(method)}rudderanalytics.load("1oriV3AWy0qOhSMsKaV0Dld5gX0","https://hosted.rudderlabs.com"),rudderanalytics.page();
 </script>
@@ -15,10 +34,10 @@ rudderanalytics=window.rudderanalytics=[];for(var methods=["load","page","track"
 	<input id="input_from_field" placeholder="Enter your email to be identified">
 </input>
 
-	<button onclick="capture_signup();" id="signup_button"> Signup
+	<button class="button_style" onclick="capture_signup();" id="signup_button"> Signup
 	</button>
     <div>
-	<button onclick="green_button();" style="color: green;background: black"> Click this button
+	<button class="button_style" onclick="green_button();" style="color: green;background: black"> Click this button
 	</button>
 	<div>
 
