@@ -480,11 +480,9 @@ rudderanalytics=window.rudderanalytics=[];for(var methods=["load","page","track"
 	function notify_me_function()
 	{
 		rudderanalytics.track(
-  "test track event GA3",
+  "Sign Up",
   {
-    revenue:  30,
-    currency:  'USD' ,
-    user_actual_id:  12345
+ email:document.getElementById("email_input").value
   }, 
   () => {console.log("in track call");}
 );
