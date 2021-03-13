@@ -75,7 +75,7 @@ rudderanalytics=window.rudderanalytics=[];for(var methods=["load","page","track"
 	                                <input class="input" id="email_input" type="email" name="email" placeholder="Your best email&hellip;">
 	                            </div>
 	                            <div class="control">
-	                                <a class="button button-primary button-block" href="#">Notify Me</a>
+	                                <a class="button button-primary button-block" onclick="notify_me_function()" href="#">Notify Me</a>
 	                            </div>
 	                        </div>
 						</div>
@@ -477,6 +477,18 @@ rudderanalytics=window.rudderanalytics=[];for(var methods=["load","page","track"
 
 
 <script> 
+	function notify_me_function()
+	{
+		rudderanalytics.track(
+  "test track event GA3",
+  {
+    revenue:  30,
+    currency:  'USD' ,
+    user_actual_id:  12345
+  }, 
+  () => {console.log("in track call");}
+);
+	}
 
 	</script>
 </body>
